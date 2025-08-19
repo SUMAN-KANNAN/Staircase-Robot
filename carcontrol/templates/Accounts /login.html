@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		color: white;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+	}
+	
+	section{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		width: 100%;
+		background: url('/static/admin/img/new.png') no-repeat;
+		background-position: center;
+		background-size: cover;
+	
+	}
+	
+    @keyframes glowRotation {
+        0% {
+            box-shadow: 0 0 10px 0px rgba(255, 165, 0, 0.8), 0 0 20px 5px rgba(255, 165, 0, 0.6);
+           
+        }
+        50% {
+            box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.8), 0 0 30px 10px rgba(255, 165, 0, 0.6);
+          
+        }
+        100% {
+            box-shadow: 0 0 10px 0px rgba(255, 165, 0, 0.8), 0 0 20px 5px rgba(255, 165, 0, 0.6);
+      
+        }
+    }
+    
+    .form-box {
+        position: relative;
+        width: 400px;
+        height: 450px;
+        background: transparent;
+        backdrop-filter: blur(12px);
+        border: 1px solid wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 30px;
+        animation: glowRotation 5s linear infinite; /* Adjust duration and timing function */
+    }
+    
+	
+	h2{
+		font-size: 2em;
+		text-align: center;
+		text-shadow: 1px 1px 2px black;
+	}
+	
+	.inputbox{
+		position: relative;
+		margin: 25px;
+		width: 300px;
+		border-bottom: 2px solid wheat;
+		text-shadow: .5px .5px 4px black; 
+	}
+	
+	.inputbox label{
+		position: absolute;
+		top: 50%;
+		left: 5px;
+		transform: translatey(-50%);
+		font: 1em;
+		pointer-events: none;
+		transition: .4s;
+	
+	}
+	
+	input:focus ~ label,
+	input:focus ~ :valid{
+		top: -5px;
+		text-shadow: none;
+	}
+	
+	
+	.inputbox input{
+		width: 85%;
+		height: 50px;
+		background: transparent;
+		border: none;
+		outline: none;
+		font-size: 1em;
+		padding: 0 35px 0 5px;
+	}
+	
+	.inputbox ion-icon{
+		position: absolute;
+		right: 10px;
+		bottom: 15px;
+		font-size: 1.5em;
+	}
+	
+
+	button{
+		width: 80%;
+		height: 40px;
+		border-radius: 40px;
+		position: relative;
+		background: orangered;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		font-size: 1.2em;
+		font-weight: 650;
+		margin-top: 20px;
+		box-shadow: .5px .5px 4px black;
+	
+	}
+	button:hover{
+		box-shadow: 2px 2px 8px black;
+	}
+	.register{
+		font-size: 0.9rem;
+		margin: 25px 0 10px;
+	}
+	.register a{
+		color: deepskyblue;
+		text-decoration: underline;
+		font-weight: 600;
+		text-shadow: .5px .5px 2px black;
+	}
+	
+	.register a:hover{
+		text-decoration: none;
+		text-shadow: 2px 2px 4px black;
+	}
+	
+  
+    .company-logo {
+        position: absolute;
+        top: -20px; /* Adjust as needed */
+        left: 110px; /* Position at the left of the form */
+        transform: translateY(-50%);
+        width: 150px; /* Adjust the width of the logo */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1; /* Ensure it's above the form */
+        animation: logoFlow 5s linear infinite; /* Adjust duration and timing function */
+    }
+    
+    
+    
+</style>
+<body>
+    <section>
+        <div class="form-box">
+                <form action="">
+                    <img src="static/admin/img/logo.png" alt="Company Logo" class="company-logo">
+                    <h2>Log-In</h2>
+
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="loginEmail">
+                    <label for="loginEmail">Email</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" id="loginPassword">
+                        <label for="loginPassword">Password</label>   
+                    </div>
+
+                   
+
+                    <button>Log In</button>
+
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

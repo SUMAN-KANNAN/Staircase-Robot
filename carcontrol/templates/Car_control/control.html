@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {% block title %}
+Control Panel
+{% endblock %} {% endcomment %}
+
+{% block content %}
+{% block stylesheets %}
+<style>
+.container {
+    margin-left: 120px;
+}
+.container h1{
+    margin-top: 30px;
+}
+.container .form-box{
+    margin-left: 150px;
+    text-align: center;
+}
+.form-box {
+    margin-left: 111px;
+    position: relative;
+    width: 75%;
+    height: 650px;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    border: 1px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    animation: glowRotation 5s linear infinite; /* Adjust duration and timing function */
+}
+
+.form-box video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.control .car-box {
+    margin-left: 111px;
+    position: relative;
+    width: 25%;
+    height: 100px;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    border: 1px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    animation: glowRotation 5s linear infinite; /* Adjust duration and timing function */
+}
+.control .camera-box {
+    margin-left: 111px;
+    position: relative;
+    width: 25%;
+    height: 100px;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    border: 1px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    animation: glowRotation 5s linear infinite; /* Adjust duration and timing function */
+}
+</style>
+{% endblock stylesheets %}
+
+<div class="container">
+    <h1>Control Panel</h1>
+   
+    <div class="form-box">
+        <video autoplay muted loop>
+            <source src="{% static 'admin/videos/landing.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="control">
+        <div class="row">
+            <div class="col-6">
+                <div class="car-box">
+                    <!-- Content for the first column -->
+                </div>
+                <div class="camera-box">
+                    <!-- Content for the second column -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

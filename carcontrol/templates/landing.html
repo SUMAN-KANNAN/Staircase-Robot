@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .video-container {
+      position: relative; /* Changed position to relative */
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* Ensure the video is behind other content */
+    }
+    .video-container video {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; /* Ensure the video covers the entire container */
+    }
+    .heading {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      z-index: 1; /* Ensure the heading is above the video */
+    }
+    .card-slider {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      z-index: 1; /* Ensure the card slider is above the video */
+    }
+    .card-slider .carousel-inner {
+      background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency here */
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .btn-container {
+      position: absolute;
+      bottom: 100px; /* Adjust the bottom position */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1; /* Ensure the button is above the video */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="static/admin/videos/landing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+   
+  </div>
+  <div class="heading">
+    <div class="fs-1 fs-3 fs-4 fs-5 "> <h1>ESP32 (Remote) based Smart Surveillance Car with Camera Integration<h1></div>
+  </div>
+  <div class="card-slider" >
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" style = "height: 250px;">
+            <div class="carousel-item active">
+                <h5>Internet of Things (IoT)</h5>
+                <br>
+                <p>The Internet of things describes devices with sensors, processing ability, software and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks. The Internet of things encompasses electronics, communication, and computer science engineering</p>
+            </div>
+            <div class="carousel-item">
+                <h5>Scope of IoT</h5>
+                <br>
+                <p>The scope of IoT encompasses various sectors, including smart homes, healthcare, industrial applications, smart cities, retail, agriculture, energy management, transportation, environmental monitoring, and wearable technology. IoT devices and sensors enable data collection, connectivity, and automation to improve efficiency, productivity, and decision-making in these domains.</p>
+            </div>
+            <div class="carousel-item">
+                <h5>Applications</h5>
+                <p>
+                    <ul>
+                        <li>Smart Homes: Automation, security, energy management.</li>
+                        <li>Healthcare: Remote patient monitoring, telemedicine, medication management.</li>
+                        <li>Industrial IoT (IIoT): Predictive maintenance, asset tracking, process automation.</li>
+                        <li>Smart Cities: Transportation systems, waste management, public safety.</li>
+                        <li>Agriculture: Soil monitoring, crop health tracking, livestock management.</li>  
+                        <li>Transportation and Logistics: Vehicle tracking, fleet management, route optimization.</li>
+                        <li>Environmental Monitoring: Air and water quality monitoring, natural habitat preservation.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn-container">
+    <a href="/home/">
+      <button class="btn btn-primary">Get Started</button>
+    </a>
+  </div>
+  
+</body>
+</html>

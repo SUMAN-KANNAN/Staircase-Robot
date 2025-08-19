@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environments
+.env
+venv/
+ENV/
+
+# Logs
+*.log
+
+# MacOS
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Node / Web (if you use Flask/Django with frontend)
+node_modules/
+dist/
+build/
